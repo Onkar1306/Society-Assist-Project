@@ -1,0 +1,540 @@
+/* Landing Page Styles for Society Assist */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    scroll-behavior: smooth;
+}
+
+.landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.landing-nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3f51b5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo i {
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links li a:hover, 
+.nav-links li a.active {
+    color: #3f51b5;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3f51b5;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #3f51b5;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%);
+    color: white;
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/api/placeholder/1200/600'); /* Replace with actual image in production */
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+/* Login Options Section */
+.login-options {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.login-option {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    flex: 1;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(63, 81, 181, 0.2);
+}
+
+.login-option h2 {
+    color: #3f51b5;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login-option-icon {
+    font-size: 50px;
+    color: #3f51b5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.login-option p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.login-btn {
+    display: inline-block;
+    background-color: #3f51b5;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #303f9f;
+    box-shadow: 0 5px 15px rgba(63, 81, 181, 0.4);
+}
+
+/* Features Section */
+.features {
+    background-color: #eef2ff;
+    padding: 80px 0;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features-title h2 {
+    color: #3f51b5;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.features-title p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #3f51b5;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-content h2 {
+    color: #3f51b5;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image i {
+    font-size: 200px;
+    color: #3f51b5;
+    opacity: 0.2;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f5f7fa;
+    padding: 80px 0;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #3f51b5;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 40px;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    color: #3f51b5;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #666;
+}
+
+/* Footer */
+.landing-footer {
+    background-color: #303f9f;
+    color: white;
+    padding: 40px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo i {
+    font-size: 1.8rem;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .login-option {
+        width: 100%;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.show {
+        max-height: 300px;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 80px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features-title h2,
+    .about-content h2,
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Animation for Login Options */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-option:nth-child(1) {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.login-option:nth-child(2) {
+    animation: fadeInUp 0.6s 0.2s ease forwards;
+    opacity: 0;
+}

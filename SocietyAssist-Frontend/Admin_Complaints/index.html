@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Complaints</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="app-title">Society Assist</div>
+        
+        <a href="/Admin_Dashboard/index.html" class="nav-item">
+            <i class="fas fa-tachometer-alt nav-icon"></i>
+            <span class="nav-text">Dashboard</span>
+        </a>
+        
+        <a href="/Admin_Notice_Sidebar/index.html" class="nav-item">
+            <i class="fas fa-clipboard-list nav-icon"></i>
+            <span class="nav-text">Notices</span>
+        </a>
+        
+        <a href="/Admin_Complaints/index.html" class="nav-item">
+            <i class="fas fa-exclamation-circle nav-icon"></i>
+            <span class="nav-text">Complaints</span>
+        </a>
+        
+        <a href="/Flatowners_All_Add/index.html" class="nav-item">
+            <i class="fas fa-users nav-icon"></i>
+            <span class="nav-text">FlatOwners</span>
+        </a>
+        
+        <div class="logout-container">
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+                <span class="nav-text">Logout</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="content" class="content">
+        <div class="container">
+            <div class="header-container">
+                <h1>List Of Complaints</h1>
+                <!-- <button id="addNoticeBtn" class="add-btn">Add Notice</button> -->
+            </div>
+            
+            <div class="table-container">
+                <table id="noticeTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>FlatOwnerID</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Complaints data will be dynamically inserted -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

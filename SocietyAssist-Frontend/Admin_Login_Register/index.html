@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login/Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i class="fas fa-building"></i>
+        <span>Society Assist</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+        <li><a href="#" class="nav-link active"><i class="fas fa-user-shield"></i> <span>Admin</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Administrator Portal</h1>
+      <p>Access the society management system to handle notices, complaints, and user accounts.</p>
+    </div>
+  </section>
+
+  <!-- Auth Section -->
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="auth-header">
+        <div class="auth-logo">Admin Access</div>
+        <div class="auth-subtitle">Sign in to manage your society</div>
+      </div>
+      
+      <div class="tabs">
+        <div class="tab active" data-tab="login">Login</div>
+        <div class="tab" data-tab="register">Register</div>
+      </div>
+      
+      <!-- Login Form -->
+      <div class="form-section active" id="login-form">
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" class="form-input" id="login-email" placeholder="admin@example.com" value="admin@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" class="form-input" id="login-password" placeholder="Enter your password" value="admin@123" required>
+              <button type="button" class="password-toggle" id="login-toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="form-button">Log In</button>
+          </div>
+          
+          <div class="form-footer">
+            <a href="#" class="form-link">Forgot password?</a>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Register Form -->
+      <div class="form-section" id="register-form">
+        <form id="adminRegisterForm">
+          <div class="form-group">
+            <label class="form-label" for="register-username">Username</label>
+            <div class="input-with-icon">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" class="form-input" id="register-username" placeholder="Admin1" value="Admin1" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="register-email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" class="form-input" id="register-email" placeholder="admin@example.com" value="admin@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="register-password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" class="form-input" id="register-password" placeholder="Create a password" value="admin@123" required>
+              <button type="button" class="password-toggle" id="register-toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="register-confirm-password">Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" class="form-input" id="register-confirm-password" placeholder="Confirm your password" value="admin@123" required>
+              <button type="button" class="password-toggle" id="register-confirm-toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="form-button">Register</button>
+          </div>
+          
+          <div class="form-footer">
+            Already have an account? <span class="form-link" id="go-to-login">Log in</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Society Assist. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

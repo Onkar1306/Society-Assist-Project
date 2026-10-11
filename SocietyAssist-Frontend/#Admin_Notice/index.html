@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Notice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <h1>List Of Notices</h1>
+            <button id="addNoticeBtn" class="add-btn">Add Notice</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="noticeTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Subject</th>
+                        <th>Description</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Notice data will be dynamically inserted -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Modal for adding notice -->
+    <div id="addNoticeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Notice</h2>
+            <form id="addNoticeForm">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required rows="5"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Sensitive configuration
+.env
+.env.*
+!.env.example
+**/application.properties
+**/application.yml
+**/application.yaml
+
+# Spring Boot / Maven
+target/
+build/
+*.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+coverage/
+
+# Logs
+*.log

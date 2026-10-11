@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flatowner Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Sidebar Start -->
+  <div id="sidebar" class="sidebar">
+    <div class="app-title">Society Assist</div>
+    <a href="/FlatOwner_Dashboard/index.html" class="nav-item active">
+      <span class="nav-icon"><i class="fas fa-tachometer-alt nav-icon"></i></span>
+      <span class="nav-text">Dashboard</span>
+    </a>
+    <a href="/FlatOwner_Notice/index.html" class="nav-item">
+      <span class="nav-icon"><i class="fas fa-clipboard-list nav-icon"></i></span>
+      <span class="nav-text">Notices</span>
+    </a>
+    <a href="/FlatOwner_Complaint/index.html" class="nav-item">
+      <span class="nav-icon"><i class="fas fa-exclamation-circle"></i></span>
+      <span class="nav-text">Complaints</span>
+    </a>
+    <div class="logout-container">
+        <button class="logout-btn" id="logoutBtn">
+        <span class="logout-icon"><i class="fas fa-sign-out-alt"></i></span>
+        Logout
+      </button>
+    </div>
+  </div>
+  <!-- Sidebar End -->
+
+  <!-- Main Content Start -->
+  <div id="content" class="content">
+    <div class="container">
+      <div class="header-container">
+        <h1>Flatowner Dashboard</h1>
+      </div>
+      <div class="dashboard-content">
+        <div class="welcome-section">
+          <h2>Welcome, <span id="flatowner-name">Resident</span></h2>
+          <p>Flat: <span id="flat-number">A-101</span></p>
+        </div>
+        
+        <div class="dashboard-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+            <div class="card-content">
+              <h3>Latest Notices</h3>
+              <p>2 new notices available</p>
+              <a href="/FlatOwner_Notice/index.html" class="card-link">View All</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-exclamation-circle"></i></div>
+            <div class="card-content">
+              <h3>Your Complaints</h3>
+              <p>1 pending complaint</p>
+              <a href="/FlatOwner_Complaint/index.html" class="card-link">View All</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-file-invoice"></i></div>
+            <div class="card-content">
+              <h3>Maintenance Bill</h3>
+              <p>Due: ₹3,500 (Apr 2025)</p>
+              <a href="#" class="card-link">Pay Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="upcoming-events">
+          <h3>Upcoming Society Events</h3>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date">
+                <span class="date-day">15</span>
+                <span class="date-month">Apr</span>
+              </div>
+              <div class="event-details">
+                <h4>Society General Meeting</h4>
+                <p>7:00 PM at Community Hall</p>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date">
+                <span class="date-day">22</span>
+                <span class="date-month">Apr</span>
+              </div>
+              <div class="event-details">
+                <h4>Quarterly Maintenance Review</h4>
+                <p>6:30 PM at Society Office</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content End -->
+
+</body>
+</html>

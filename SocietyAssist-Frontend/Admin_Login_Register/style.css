@@ -1,0 +1,299 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #3f51b5;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand i {
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin-left: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%);
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Auth Container */
+.auth-container {
+  max-width: 1200px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.auth-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-logo {
+  color: #3f51b5;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e1e5ee;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: #3f51b5;
+  border-bottom: 2px solid #3f51b5;
+}
+
+.tab:hover:not(.active) {
+  background-color: #f8f9fb;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-input:focus {
+  border-color: #3f51b5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.form-button {
+  width: 100%;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #303f9f;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-link {
+  color: #3f51b5;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.input-with-icon .form-input {
+  padding-left: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background-color: #f0f2f5;
+  padding: 20px 0;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .auth-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand span {
+    display: none;
+  }
+  
+  .nav-links .nav-link span {
+    display: none;
+  }
+  
+  .nav-link i {
+    font-size: 18px;
+  }
+  
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .auth-container {
+    margin-top: -40px;
+  }
+}

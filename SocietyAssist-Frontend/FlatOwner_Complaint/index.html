@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Complaints</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="app-title">Society Assist</div>
+        
+        <a href="/FlatOwner_Dashboard/index.html" class="nav-item">
+            <i class="fas fa-tachometer-alt nav-icon"></i>
+            <span class="nav-text">Dashboard</span>
+        </a>
+        
+        <a href="/FlatOwner_Notice/index.html" class="nav-item">
+            <i class="fas fa-clipboard-list nav-icon"></i>
+            <span class="nav-text">Notices</span>
+        </a>
+        
+        <a href="/FlatOwner_Complaint/index.html" class="nav-item">
+            <i class="fas fa-exclamation-circle nav-icon"></i>
+            <span class="nav-text">Complaints</span>
+        </a>
+        
+        <div class="logout-container">
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+                <span class="nav-text">Logout</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="content" class="content">
+        <div class="container">
+            <div class="header-container">
+                <h1>My Complaints</h1>
+                <button id="addComplaintBtn" class="add-btn">Add Complaint</button>
+            </div>
+            
+            <div class="table-container">
+                <table id="complaintTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Complaints data will be dynamically inserted -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add Complaint Modal -->
+    <div id="complaintModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Complaint</h2>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Security">Security</option>
+                        <option value="Cleanliness">Cleanliness</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required placeholder="Describe your complaint in detail..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Complaint</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
