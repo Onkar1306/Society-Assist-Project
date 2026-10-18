@@ -8,6 +8,7 @@
 **/application.properties
 **/application.yml
 **/application.yaml
+!SocietyAssist-Backend/src/test/resources/application.properties
 
 # Spring Boot / Maven
 target/
